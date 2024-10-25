@@ -43,7 +43,7 @@ dependencies {
     }
     testRuntimeOnly "org.yaml:snakeyaml:$snakeYamlVersion"
     testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
-    testRuntimeOnly "com.h2database:h2:$h2Version"
+    testRuntimeOnly "com.h2database:h2"
     testRuntimeOnly "org.apache.tomcat:tomcat-jdbc:$tomcatVersion"
     testRuntimeOnly "org.apache.tomcat.embed:tomcat-embed-logging-log4j:$tomcatLog4jVersion"
     testRuntimeOnly "org.springframework:spring-aop:$springVersion"

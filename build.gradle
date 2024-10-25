@@ -83,7 +83,6 @@ subprojects { Project subproject ->
     if(isExample) {
         apply plugin: "groovy"
 
-        ext['h2.version'] = h2Version
         ext['gorm.version'] = gormVersion
 
         if(subproject.name.startsWith("examples-grails")) {
