@@ -221,6 +221,8 @@ subprojects { Project subproject ->
     }
 
     dependencies {
+        implementation platform("org.grails:grails-bom:$grailsVersion")
+
         documentation "org.fusesource.jansi:jansi:$jansiVersion"
         documentation "org.apache.groovy:groovy-dateutil:$groovyVersion"
         documentation "info.picocli:picocli:$picocliVersion"
