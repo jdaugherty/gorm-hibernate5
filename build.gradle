@@ -117,9 +117,8 @@ subprojects { Project subproject ->
             }
         }
 
-
-
         dependencies {
+            implementation platform("org.grails:grails-bom:$grailsVersion")
             testImplementation "jakarta.annotation:jakarta.annotation-api:$jakartaAnnotationApiVersion"
             testImplementation "io.micrometer:micrometer-core:latest.integration"
             testImplementation "io.projectreactor:reactor-test:$projectReactorVersion"
@@ -184,6 +183,10 @@ subprojects { Project subproject ->
 
     apply plugin: 'groovy'
 
+    dependencies {
+        implementation platform("org.grails:grails-bom:$grailsVersion")
+    }
+
     configurations {
         documentation.extendsFrom(compileClasspath)
     }
@@ -221,8 +224,6 @@ subprojects { Project subproject ->
     }
 
     dependencies {
-        implementation platform("org.grails:grails-bom:$grailsVersion")
-
         documentation "org.fusesource.jansi:jansi:$jansiVersion"
         documentation "org.apache.groovy:groovy-dateutil:$groovyVersion"
         documentation "info.picocli:picocli:$picocliVersion"
