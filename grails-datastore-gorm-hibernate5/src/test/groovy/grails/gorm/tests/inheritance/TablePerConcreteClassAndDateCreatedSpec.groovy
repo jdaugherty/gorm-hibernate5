@@ -51,8 +51,7 @@ abstract class Vehicle {
     }
 }
 
-// @Entity
-// https://issues.apache.org/jira/browse/GROOVY-5106 - The interface GormEntity cannot be implemented more than once with different arguments: org.grails.datastore.gorm.GormEntity<grails.gorm.tests.XXX> and org.grails.datastore.gorm.GormEntity<grails.gorm.tests.XXX>
+@Entity
 class Spaceship extends Vehicle {
     static mapping = {
         dynamicUpdate true
