@@ -83,7 +83,6 @@ subprojects { Project subproject ->
     if(isExample) {
         apply plugin: "groovy"
 
-        ext['h2.version'] = h2Version
         ext['gorm.version'] = gormVersion
 
         if(subproject.name.startsWith("examples-grails")) {
@@ -117,9 +116,8 @@ subprojects { Project subproject ->
             }
         }
 
-
-
         dependencies {
+            implementation platform("org.grails:grails-bom:$grailsVersion")
             testImplementation "jakarta.annotation:jakarta.annotation-api:$jakartaAnnotationApiVersion"
             testImplementation "io.micrometer:micrometer-core:latest.integration"
             testImplementation "io.projectreactor:reactor-test:$projectReactorVersion"
@@ -183,6 +181,10 @@ subprojects { Project subproject ->
     }
 
     apply plugin: 'groovy'
+
+    dependencies {
+        implementation platform("org.grails:grails-bom:$grailsVersion")
+    }
 
     configurations {
         documentation.extendsFrom(compileClasspath)
