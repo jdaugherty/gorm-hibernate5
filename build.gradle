@@ -58,9 +58,7 @@ dependencies {
     documentation "com.github.javaparser:javaparser-core"
 }
 
-compileJava {
-    options.release = 17
-}
+compileJava.options.release = 17
 
 grailsPublish {
     userOrg = "grails"
