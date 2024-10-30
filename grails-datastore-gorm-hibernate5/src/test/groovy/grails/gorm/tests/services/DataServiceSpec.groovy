@@ -8,13 +8,13 @@ import grails.gorm.services.Where
 import grails.gorm.transactions.Rollback
 import grails.gorm.validation.PersistentEntityValidator
 import grails.validation.ValidationException
-import groovy.json.JsonOutput
+import groovy.json.DefaultJsonGenerator
+import groovy.json.JsonGenerator
 import org.grails.datastore.gorm.validation.constraints.eval.DefaultConstraintEvaluator
 import org.grails.datastore.gorm.validation.constraints.registry.DefaultConstraintRegistry
 import org.grails.orm.hibernate.HibernateDatastore
 import org.springframework.context.support.StaticMessageSource
 import spock.lang.AutoCleanup
-import spock.lang.Ignore
 import spock.lang.Issue
 import spock.lang.Shared
 import spock.lang.Specification
@@ -314,7 +314,7 @@ class DataServiceSpec extends Specification {
 
         ProductInfo info = productService.findProductInfo("Pumpkin", "Vegetable")
         List<ProductInfo> infos = productService.findProductInfos( "Vegetable")
-        def result = JsonOutput.toJson(info)
+        def result = new DefaultJsonGenerator(new JsonGenerator.Options().excludeFieldsByName("\$target")).toJson(info)
         then:
         infos.size() == 2
         infos.first().name == "Carrot"
