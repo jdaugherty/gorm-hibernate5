@@ -27,8 +27,8 @@ dependencies {
 
     api "org.springframework.boot:spring-boot:$springBootVersion"
     api "org.springframework:spring-orm:$springVersion"
-    api "org.hibernate:hibernate-core-jakarta:${hibernate5Version}"
-    api "org.hibernate:hibernate-ehcache:$hibernate5Version"
+    api "org.hibernate:hibernate-core-jakarta:${hibernateVersion}"
+    api "org.hibernate:hibernate-ehcache:$hibernateVersion"
     api "org.grails:grails-datastore-web:$gormVersion"
     api "org.grails:grails-datastore-gorm-support:$gormVersion"
     api project(":grails-datastore-gorm-hibernate5"), {
