@@ -2,8 +2,8 @@ dependencies {
     api "org.slf4j:slf4j-api:$slf4jVersion"
 
     api "org.apache.groovy:groovy:$groovyVersion"
-    api("org.grails:grails-datastore-gorm:$gormVersion")
-    api "org.springframework:spring-orm:$springVersion"
+    api "org.grails:grails-datastore-gorm"
+    api "org.springframework:spring-orm"
     api("org.hibernate:hibernate-core-jakarta:$hibernateVersion") {
         exclude group:'commons-logging', module:'commons-logging'
         exclude group:'com.h2database', module:'h2'
@@ -46,7 +46,7 @@ dependencies {
     testImplementation "org.yakworks:hibernate-groovy-proxy:$hibernateGroovyProxy"
 
     testImplementation "org.apache.tomcat:tomcat-jdbc:$tomcatVersion"
-    testRuntimeOnly "org.springframework:spring-aop:$springVersion"
+    testRuntimeOnly "org.springframework:spring-aop"
     testRuntimeOnly "org.apache.tomcat.embed:tomcat-embed-logging-log4j:$tomcatLog4jVersion"
 
     testRuntimeOnly "org.slf4j:slf4j-simple:$slf4jVersion"
