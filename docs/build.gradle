@@ -17,14 +17,6 @@ version rootProject.version
 apply plugin: 'groovy'
 apply plugin: 'org.asciidoctor.jvm.convert'
 
-configurations.all {
-    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-        if (details.requested.group == 'org.apache.groovy' && details.requested.name.startsWith('groovy')) {
-            details.useVersion(groovyVersion)
-        }
-    }
-}
-
 dependencies {
     documentation "org.grails:grails-core:$grailsVersion"
     documentation "org.grails:grails-bootstrap:$grailsVersion"

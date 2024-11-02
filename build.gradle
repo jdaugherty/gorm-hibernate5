@@ -94,22 +94,6 @@ subprojects { Project subproject ->
             }
         }
 
-        configurations.all { Configuration configuration->
-            configuration.resolutionStrategy.eachDependency { DependencyResolveDetails details ->
-                if(details.requested.group == 'org.apache.groovy' && details.requested.name.startsWith('groovy')) {
-                    details.useVersion(groovyVersion)
-                }
-                if (details.requested.group == "org.grails" && details.requested.name.contains("testing-support")) {
-                    details.useVersion(testingSupportVersion)
-                }
-                if(details.requested.group == 'org.grails' &&
-                        details.requested.name.startsWith('grails-datastore') &&
-                        details.requested.name != 'grails-datastore-gorm-hibernate5') {
-                    details.useVersion(gormVersion)
-                }
-            }
-        }
-
         dependencies {
             implementation platform("org.grails:grails-bom:$grailsVersion")
             testImplementation "jakarta.annotation:jakarta.annotation-api"
