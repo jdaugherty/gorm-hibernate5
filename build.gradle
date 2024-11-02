@@ -204,7 +204,7 @@ subprojects { Project subproject ->
         documentation platform("org.grails:grails-bom:$grailsVersion")
         documentation "org.fusesource.jansi:jansi"
         documentation "org.apache.groovy:groovy-dateutil"
-        documentation "info.picocli:picocli"
+        documentation "info.picocli:picocli:$picocliVersion"
         documentation "com.github.javaparser:javaparser-core"
 
         implementation "org.apache.groovy:groovy"
