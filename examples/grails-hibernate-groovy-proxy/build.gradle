@@ -1,23 +1,21 @@
-group "examples"
+plugins {
+    id 'groovy'
+    id 'org.grails.grails-web'
+}
+
+version = rootProject.version
+group = 'examples'
 
 dependencies {
-    implementation "org.yakworks:hibernate-groovy-proxy:$hibernateGroovyProxy"
 
-    implementation "org.springframework.boot:spring-boot-starter-logging"
-    implementation "org.springframework.boot:spring-boot-autoconfigure"
-    implementation "org.grails:grails-core:$grailsVersion"
-    implementation "org.grails:grails-dependencies:$grailsVersion", {
-        exclude module:'grails-datastore-simple'
-    }
-    implementation "org.grails:grails-web-boot:$grailsVersion"
-    implementation project(":grails-plugin")
+    implementation project(':grails-plugin')
+    implementation 'org.grails:grails-core'
+    implementation "org.yakworks:hibernate-groovy-proxy:$yakworksHibernateGroovyProxyVersion"
 
-    implementation "org.hibernate:hibernate-core-jakarta:$hibernateVersion"
+    runtimeOnly 'com.h2database:h2'
+    runtimeOnly 'com.zaxxer:HikariCP'
+    runtimeOnly 'org.springframework.boot:spring-boot-autoconfigure'
+    runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
 
-    runtimeOnly "com.h2database:h2"
-    runtimeOnly "org.yaml:snakeyaml:$snakeYamlVersion"
-    runtimeOnly "org.apache.tomcat:tomcat-jdbc:$tomcatVersion"
-
-    testImplementation "org.grails:grails-gorm-testing-support:$testingSupportVersion"
-
+    testImplementation 'org.grails:grails-testing-support'
 }
