@@ -27,7 +27,8 @@ buildCache {
 
 
 // Core
-include "grails-datastore-gorm-hibernate5"
+include "grails-datastore-gorm-hibernate"
+findProject(':grails-datastore-gorm-hibernate').name = 'grails-datastore-gorm-hibernate5'
 
 // Documentation
 include 'docs'
