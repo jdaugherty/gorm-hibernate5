@@ -15,7 +15,7 @@ apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"java-library"
 apply plugin:"org.grails.grails-plugin"
-apply plugin:"org.grails.internal.grails-plugin-publish"
+apply plugin:"org.grails.grails-publish"
 apply plugin:"org.grails.grails-gsp"
 apply plugin: "org.asciidoctor.jvm.convert"
 
@@ -61,13 +61,12 @@ dependencies {
 compileJava.options.release = 17
 
 grailsPublish {
-    userOrg = "grails"
-    githubSlug = 'grails-plugins/grails-database-migration'
+    githubSlug = 'grails/grails-database-migration'
     license {
         name = 'Apache-2.0'
     }
-    title = "Grails Database Migration Plugin"
-    desc = "Grails Database Migration Plugin"
+    title = 'Grails Database Migration Plugin'
+    desc = 'Grails Database Migration Plugin'
     developers = [kazukiyamamoto: "Kazuki YAMAMOTO"]
 }
 
