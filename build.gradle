@@ -38,7 +38,11 @@ dependencies {
         exclude group: 'org.hibernate', module: 'hibernate-envers'
         exclude group: 'com.h2database', module: 'h2'
     }
+
     api "org.apache.commons:commons-lang3"
+    api("org.grails:grails-shell") {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
 
     compileOnly "org.springframework.boot:spring-boot-starter-logging"
     compileOnly "org.springframework.boot:spring-boot-autoconfigure"
