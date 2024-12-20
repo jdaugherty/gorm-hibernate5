@@ -10,7 +10,9 @@ dependencies {
 
     implementation project(':grails-plugin')
     implementation 'org.grails:grails-core'
-    implementation "org.yakworks:hibernate-groovy-proxy:$yakworksHibernateGroovyProxyVersion"
+    implementation "org.yakworks:hibernate-groovy-proxy:$yakworksHibernateGroovyProxyVersion", {
+        exclude group: "org.codehaus.groovy", module: "groovy"
+    }
 
     runtimeOnly 'com.h2database:h2'
     runtimeOnly 'com.zaxxer:HikariCP'

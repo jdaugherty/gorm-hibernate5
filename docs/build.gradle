@@ -18,17 +18,17 @@ apply plugin: 'groovy'
 apply plugin: 'org.asciidoctor.jvm.convert'
 
 dependencies {
-    documentation "org.grails:grails-core:$grailsVersion"
-    documentation "org.grails:grails-bootstrap:$grailsVersion"
-    documentation "org.grails:grails-spring:$grailsVersion"
+    documentation "org.grails:grails-core"
+    documentation "org.grails:grails-bootstrap"
+    documentation "org.grails:grails-spring"
     documentation "info.picocli:picocli:$picocliVersion"
-    documentation "org.fusesource.jansi:jansi:$jansiVersion"
-    documentation "org.apache.groovy:groovy-dateutil:$groovyVersion"
-    documentation "com.github.javaparser:javaparser-core:$javaParserCoreVersion"
+    documentation "org.fusesource.jansi:jansi"
+    documentation "org.apache.groovy:groovy-dateutil"
+    documentation "com.github.javaparser:javaparser-core"
 
-    documentation "org.fusesource.jansi:jansi:$jansiVersion"
+    documentation "org.fusesource.jansi:jansi"
     for(p in coreProjects) {
-        documentation "org.grails:grails-datastore-$p:$gormVersion"
+        documentation "org.grails:grails-datastore-$p"
     }
     project.rootProject.subprojects.each { subproject ->
         if(subproject.name != "docs" && !subproject.name.startsWith('examples')) {
