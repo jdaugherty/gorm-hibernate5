@@ -9,6 +9,7 @@ version = rootProject.version
 group = 'multitenantcomposite'
 
 dependencies {
+    implementation platform("org.grails:grails-bom:$grailsVersion")
 
     implementation project(':grails-plugin')
     implementation 'org.grails:grails-core'
