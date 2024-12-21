@@ -1,4 +1,6 @@
 dependencies {
+    implementation platform("org.grails:grails-bom:$grailsVersion")
+
     api "org.slf4j:slf4j-api"
 
     api "org.apache.groovy:groovy"

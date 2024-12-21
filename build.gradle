@@ -68,7 +68,7 @@ allprojects {
             }
         }
         if (System.getenv("GITHUB_MAVEN_PASSWORD") && !grailsVersion.endsWith('-SNAPSHOT')) {
-            System.out.println("Adding Grails Core Repo")
+            System.out.println("Adding Grails Core Repo for ${project.name}")
             maven {
                 url = 'https://maven.pkg.github.com/grails/grails-core'
                 credentials {
@@ -102,11 +102,6 @@ subprojects { Project subproject ->
         }
 
         dependencies {
-
-            // Global dependencies for every app should be added here with great caution.
-            // Gorm is used by other frameworks (ie springboot, micronaut, etc) and we
-            // don't want to add dependencies that would make it harder to use in those frameworks.
-
             testImplementation "jakarta.annotation:jakarta.annotation-api"
             testImplementation "io.micrometer:micrometer-core:latest.integration"
             testImplementation "io.projectreactor:reactor-test"
@@ -171,10 +166,6 @@ subprojects { Project subproject ->
 
     apply plugin: 'groovy'
 
-    dependencies {
-        implementation platform("org.grails:grails-bom:$grailsVersion")
-    }
-
     configurations {
         documentation.extendsFrom(compileClasspath)
     }
@@ -203,10 +194,8 @@ subprojects { Project subproject ->
     apply plugin: 'maven-publish'
     apply plugin: 'signing'
 
+    compileJava.options.release = 17
     java {
-        toolchain {
-            languageVersion = JavaLanguageVersion.of(17)
-        }
         withJavadocJar()
         withSourcesJar()
     }
