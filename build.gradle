@@ -67,6 +67,16 @@ allprojects {
                 url = 'https://repository.apache.org/content/repositories/snapshots'
             }
         }
+        if (System.getenv("GITHUB_MAVEN_PASSWORD") && !grailsVersion.endsWith('-SNAPSHOT')) {
+            System.out.println("Adding Grails Core Repo")
+            maven {
+                url = 'https://maven.pkg.github.com/grails/grails-core'
+                credentials {
+                    username = 'DOES_NOT_MATTER'
+                    password = System.getenv("GITHUB_MAVEN_PASSWORD")
+                }
+            }
+        }
     }
 }
 
@@ -92,7 +102,11 @@ subprojects { Project subproject ->
         }
 
         dependencies {
-            implementation platform("org.grails:grails-bom:$grailsVersion")
+
+            // Global dependencies for every app should be added here with great caution.
+            // Gorm is used by other frameworks (ie springboot, micronaut, etc) and we
+            // don't want to add dependencies that would make it harder to use in those frameworks.
+
             testImplementation "jakarta.annotation:jakarta.annotation-api"
             testImplementation "io.micrometer:micrometer-core:latest.integration"
             testImplementation "io.projectreactor:reactor-test"

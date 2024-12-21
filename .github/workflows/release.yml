@@ -17,13 +17,13 @@ jobs:
       - name: Set up JDK
         uses: actions/setup-java@v4
         with:
-          distribution: temurin
+          distribution: liberica
           java-version: '17'
       - name: Set the current release version
         id: release_version
         run: echo "release_version=${GITHUB_REF:11}" >> $GITHUB_OUTPUT
       - name: Run pre-release
-        uses: micronaut-projects/github-actions/pre-release@master
+        uses: grails/github-actions/pre-release@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: Generate secring file
@@ -43,6 +43,7 @@ jobs:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GRADLE_ENTERPRISE_ACCESS_KEY }}
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER }}
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY }}
+          GITHUB_MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         with:
           arguments: -Psigning.secretKeyRingFile=${{ github.workspace }}/secring.gpg publishToSonatype closeAndReleaseSonatypeStagingRepository
       - name: Publish Documentation
@@ -53,10 +54,11 @@ jobs:
           GRADLE_ENTERPRISE_ACCESS_KEY: ${{ secrets.GRADLE_ENTERPRISE_ACCESS_KEY }}
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_USER }}
           GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY: ${{ secrets.GRADLE_ENTERPRISE_BUILD_CACHE_NODE_KEY }}
+          GITHUB_MAVEN_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         with:
           arguments: docs:docs
       - name: Export Gradle Properties
-        uses: micronaut-projects/github-actions/export-gradle-properties@master
+        uses: grails/github-actions/export-gradle-properties@main
       - name: Determine docs target repository
         if: success()
         uses: haya14busa/action-cond@v1
@@ -67,7 +69,7 @@ jobs:
           if_false: ${{ github.repository }}
       - name: Publish to Github Pages
         if: success()
-        uses: micronaut-projects/github-pages-deploy-action@grails
+        uses: grails/github-pages-deploy-action@grails
         env:
           SKIP_LATEST: ${{ contains(steps.release_version.outputs.release_version, 'M') }}
           TARGET_REPOSITORY: ${{ steps.docs_target.outputs.value }}
@@ -81,7 +83,7 @@ jobs:
           VERSION: ${{ steps.release_version.outputs.release_version }}
       - name: Run post-release
         if: success()
-        uses: micronaut-projects/github-actions/post-release@master
+        uses: grails/github-actions/post-release@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
         env:

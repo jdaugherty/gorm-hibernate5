@@ -10,6 +10,7 @@ configurations {
 }
 
 dependencies {
+    implementation platform("org.grails:grails-bom:$grailsVersion")
 
     astTransformation 'jakarta.servlet:jakarta.servlet-api'
     astTransformation 'org.grails:grails-plugin-controllers'
