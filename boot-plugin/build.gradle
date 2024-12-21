@@ -1,4 +1,6 @@
 dependencies {
+    implementation platform("org.grails:grails-bom:$grailsVersion")
+
     compileOnly "org.grails:grails-shell", {
         exclude group:'org.apache.groovy', module:'groovy'
     }
