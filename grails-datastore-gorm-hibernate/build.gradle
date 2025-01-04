@@ -37,7 +37,7 @@ dependencies {
     testImplementation "org.apache.groovy:groovy-test-junit5"
     testImplementation "org.apache.groovy:groovy-sql"
     testImplementation "org.apache.groovy:groovy-json"
-    testImplementation "org.grails:grails-datastore-gorm-tck:$gormVersion", {
+    testImplementation "org.grails:grails-datastore-gorm-tck", {
         exclude group: "org.spockframework"
     }
     testImplementation "com.h2database:h2"
