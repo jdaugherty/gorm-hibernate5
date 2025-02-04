@@ -28,6 +28,11 @@ dependencies {
     api "org.hibernate:hibernate-ehcache:$hibernateVersion", {
         exclude group:'org.hibernate', module:'hibernate-core'
     }
+    // required for org.hibernate:hibernate-ehcache to work with org.hibernate:hibernate-core-jakarta
+    api "org.jboss.spec.javax.transaction:jboss-transaction-api_1.3_spec:$jbossTransactionApiVersion", {
+        exclude group:"jakarta.enterprise", module:"jakarta.enterprise.cdi-api"
+    }
+
     api "org.grails:grails-datastore-web"
     api "org.grails:grails-datastore-gorm-support"
     api project(":grails-datastore-gorm-hibernate5"), {
