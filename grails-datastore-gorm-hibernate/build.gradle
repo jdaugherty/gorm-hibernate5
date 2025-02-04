@@ -42,7 +42,9 @@ dependencies {
     }
     testImplementation "com.h2database:h2"
 
-    testImplementation "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    testImplementation "org.hibernate:hibernate-ehcache:$hibernateVersion", {
+        exclude group:'org.hibernate', module:'hibernate-core'
+    }
 
     // groovy proxy fixes bytebuddy to be a bit smarter when it comes to groovy metaClass
     testImplementation "org.yakworks:hibernate-groovy-proxy:$yakworksHibernateGroovyProxyVersion", {
