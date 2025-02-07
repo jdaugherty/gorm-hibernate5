@@ -26,7 +26,10 @@ dependencies {
     runtimeOnly 'org.grails:grails-plugin-services'
     runtimeOnly 'org.grails:grails-plugin-url-mappings'
     runtimeOnly 'org.grails.plugins:fields'
-    runtimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    runtimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion", {
+        // exclude javax variant of hibernate-core 5.6
+        exclude group: 'org.hibernate', module: 'hibernate-core'
+    }
     runtimeOnly 'org.springframework.boot:spring-boot-autoconfigure'
     runtimeOnly 'org.springframework.boot:spring-boot-starter-logging'
     runtimeOnly 'org.springframework.boot:spring-boot-starter-tomcat'

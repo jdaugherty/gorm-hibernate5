@@ -42,7 +42,10 @@ dependencies {
 
     testRuntimeOnly "com.h2database:h2"
     testRuntimeOnly "org.apache.tomcat:tomcat-jdbc"
-    testRuntimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    testRuntimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion", {
+        // exclude javax variant of hibernate-core 5.6
+        exclude group: 'org.hibernate', module: 'hibernate-core'
+    }
     testRuntimeOnly "org.springframework:spring-aop"
     testRuntimeOnly "org.springframework:spring-expression"
     testRuntimeOnly "org.yaml:snakeyaml"

@@ -36,7 +36,10 @@ dependencies {
 
     testImplementation "org.apache.tomcat:tomcat-jdbc"
 
-    testRuntimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion"
+    testRuntimeOnly "org.hibernate:hibernate-ehcache:$hibernateVersion", {
+        // exclude javax variant of hibernate-core 5.6
+        exclude group: 'org.hibernate', module: 'hibernate-core'
+    }
     testRuntimeOnly "org.slf4j:slf4j-simple"
     testRuntimeOnly "org.slf4j:jcl-over-slf4j"
     testRuntimeOnly "org.springframework:spring-aop"
