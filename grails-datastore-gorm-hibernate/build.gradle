@@ -40,6 +40,9 @@ dependencies {
         // exclude javax variant of hibernate-core 5.6
         exclude group: 'org.hibernate', module: 'hibernate-core'
     }
+    testRuntimeOnly "org.jboss.spec.javax.transaction:jboss-transaction-api_1.3_spec:$jbossTransactionApiVersion", {
+        // required for hibernate-ehcache to work with javax variant of hibernate-core excluded
+    }
     testRuntimeOnly "org.slf4j:slf4j-simple"
     testRuntimeOnly "org.slf4j:jcl-over-slf4j"
     testRuntimeOnly "org.springframework:spring-aop"
