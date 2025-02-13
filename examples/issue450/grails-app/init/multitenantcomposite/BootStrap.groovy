@@ -2,12 +2,10 @@ package multitenantcomposite
 
 import grails.gorm.multitenancy.Tenants
 import groovy.transform.CompileStatic
-import jakarta.servlet.ServletContext
 
 @CompileStatic
 class BootStrap {
 
-    ServletContext servletContext
     BookService bookService
 
     def init = {

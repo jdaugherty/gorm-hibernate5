@@ -1,11 +1,9 @@
 package functional.tests
 
-import jakarta.servlet.ServletContext
 import org.grails.orm.hibernate.HibernateDatastore
 
 class BootStrap {
 
-    ServletContext servletContext
     HibernateDatastore hibernateDatastore
 
     def init = {
