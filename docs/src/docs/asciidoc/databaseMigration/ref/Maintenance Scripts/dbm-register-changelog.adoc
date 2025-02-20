@@ -1,10 +1,10 @@
-==== dbm-register-changelog
+===== dbm-register-changelog
 
-===== Purpose
+====== Purpose
 
 Adds an include for the specified changelog to the main changelog.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

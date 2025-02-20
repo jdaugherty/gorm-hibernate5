@@ -1,10 +1,10 @@
-==== dbm-list-tags
+===== dbm-list-tags
 
-===== Purpose
+====== Purpose
 
 Lists the tags in the current database.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

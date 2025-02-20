@@ -1,10 +1,10 @@
-==== dbm-generate-gorm-changelog
+===== dbm-generate-gorm-changelog
 
-===== Purpose
+====== Purpose
 
 Generates an initial changelog XML or Groovy DSL file from current GORM classes.
 
-===== Description
+====== Description
 
 Creates a Groovy DSL file if the filename is specified and it ends with .groovy. If another extension is specified it creates a standard Liquibase XML file, and if no filename is specified it writes to the console.
 

@@ -1,7 +1,4 @@
-:includedir: _includes
-:integrationtestresources: ../../integration-test/resources
-
-== Configuration
+=== Configuration
 
 There are a few configuration options for the plugin. All configurations are prefixed with `grails.plugin.databasemigration`:
 
@@ -35,7 +32,7 @@ NOTE: All the above configs can be used for multiple datasources
 If secondary dataSource named "second" is configured in application.yml
 [source,yaml]
 ----
-include::{integrationtestresources}/application-multiple-datasource.yml[lines=11..29]
+include::{migrationPluginExamplesDir}/application-multiple-datasource.yml[lines=11..29]
 ----
 
 The configuration for this data source would be:

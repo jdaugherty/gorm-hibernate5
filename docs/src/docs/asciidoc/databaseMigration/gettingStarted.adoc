@@ -1,4 +1,4 @@
-== Getting Started
+=== Getting Started
 
 *The first step is to add a dependency for the plugin in `build.gradle`:*
 
@@ -7,13 +7,13 @@
 buildscript {
    dependencies {
       ...
-      classpath '{groupId}:{artifactId}:{version}'
+      classpath '{migrationPluginGroupId}:{migrationPluginArtifactId}:{version}'
    }
 }
 
 dependencies {
    ...
-     implementation '{groupId}:{artifactId}:{version}'
+     implementation '{migrationPluginGroupId}:{migrationPluginArtifactId}:{version}'
 }
 ----
 

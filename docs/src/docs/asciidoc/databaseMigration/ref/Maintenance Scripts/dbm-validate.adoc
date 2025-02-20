@@ -1,10 +1,10 @@
-==== dbm-validate
+===== dbm-validate
 
-===== Purpose
+====== Purpose
 
 Checks the changelog for errors.
 
-===== Description
+====== Description
 
 Prints any validation messages to the console.
 

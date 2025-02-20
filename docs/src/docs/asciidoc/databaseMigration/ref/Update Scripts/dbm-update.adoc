@@ -1,10 +1,10 @@
-==== dbm-update
+===== dbm-update
 
-===== Purpose
+====== Purpose
 
 Updates a database to the current version.
 
-===== Description
+====== Description
 
 Runs all un-run changeSets from the changelog. Executes against the database configured in `application.[yml|groovy]` for the current environment (defaults to `dev`).
 

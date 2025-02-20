@@ -1,10 +1,10 @@
-==== dbm-diff
+===== dbm-diff
 
-===== Purpose
+====== Purpose
 
 Compares two databases and creates a changelog that will make the changes required to bring them into sync.
 
-===== Description
+====== Description
 
 Executes against the database configured in `application.[yml|groovy]`  for the current environment (defaults to `dev`) and another configured datasource in `application.[yml|groovy]`.
 

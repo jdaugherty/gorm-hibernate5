@@ -1,10 +1,10 @@
-==== dbm-changelog-sync
+===== dbm-changelog-sync
 
-===== Purpose
+====== Purpose
 
 Mark all changes as executed in the database.
 
-===== Description
+====== Description
 
 Registers all changesets as having been run in the Liquibase control table. This is useful when the changes have already been applied, for example if you've just created a changelog from your database using the <<ref-rollback-scripts-dbm-generate-changelog,dbm-generate-changelog>> script.
 

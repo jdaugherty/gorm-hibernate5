@@ -1,10 +1,10 @@
-==== dbm-future-rollback-sql
+===== dbm-future-rollback-sql
 
-===== Purpose
+====== Purpose
 
 Writes SQL to roll back the database to the current state after the changes in the changeslog have been applied to STDOUT or a file.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

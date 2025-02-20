@@ -1,10 +1,10 @@
-==== dbm-create-changelog
+===== dbm-create-changelog
 
-===== Purpose
+====== Purpose
 
 Creates an empty changelog file.
 
-===== Description
+====== Description
 
 Creates a new empty file instead of generating the file from the database (using <<ref-rollback-scripts-dbm-generate-changelog,dbm-generate-changelog>>) or your GORM classes (using <<ref-rollback-scripts-dbm-generate-gorm-changelog,dbm-generate-gorm-changelog>>).
 

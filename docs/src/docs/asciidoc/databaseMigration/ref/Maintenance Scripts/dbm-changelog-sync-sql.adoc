@@ -1,10 +1,10 @@
-==== dbm-changelog-sync-sql
+===== dbm-changelog-sync-sql
 
-===== Purpose
+====== Purpose
 
 Writes the SQL that will mark all changes as executed in the database to STDOUT or a file.
 
-===== Description
+====== Description
 
 Generates the SQL statements for the Liquibase `DATABASECHANGELOG` control table.
 

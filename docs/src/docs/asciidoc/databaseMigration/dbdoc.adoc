@@ -1,4 +1,4 @@
-== DbDoc Controller
+=== DbDoc Controller
 
 You can use the <<ref-documentation-scripts-dbm-db-doc,dbm-db-doc>> script to generate static HTML files to view changelog information, but another option is to use the `DbDocController` at runtime. By default this controller is mapped to `/appname/dbdoc/` but this can be customized with `UrlMappings` like any controller.
 

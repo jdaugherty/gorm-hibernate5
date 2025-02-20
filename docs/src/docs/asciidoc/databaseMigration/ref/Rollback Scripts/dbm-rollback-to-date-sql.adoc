@@ -1,10 +1,10 @@
-==== dbm-rollback-to-date-sql
+===== dbm-rollback-to-date-sql
 
-===== Purpose
+====== Purpose
 
 Writes SQL to roll back the database to the state it was in at the given date/time to STDOUT or a file.
 
-===== Description
+====== Description
 
 You can specify just the date, or the date and time. The date format must be `yyyy-MM-dd` and the time format must be `HH:mm:ss`.
 

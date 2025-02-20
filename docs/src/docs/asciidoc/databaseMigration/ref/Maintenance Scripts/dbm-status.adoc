@@ -1,10 +1,10 @@
-==== dbm-status
+===== dbm-status
 
-===== Purpose
+====== Purpose
 
 Outputs count or list of unrun change sets to STDOUT or a file.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

@@ -1,10 +1,10 @@
-==== dbm-db-doc
+===== dbm-db-doc
 
-===== Purpose
+====== Purpose
 
 Generates Javadoc-like documentation based on current database and change log.
 
-===== Description
+====== Description
 
 Writes to the folder specified by the `destination` parameter, or to the `grails.plugin.databasemigration.dbDocLocation` configuration option (defaults to `target/dbdoc`).
 

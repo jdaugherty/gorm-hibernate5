@@ -1,10 +1,10 @@
-==== dbm-previous-changeset-sql
+===== dbm-previous-changeset-sql
 
-===== Purpose
+====== Purpose
 
 Writes the SQL to STDOUT or a file for the specified number of previous changesets whether they have run or not.
 
-===== Description
+====== Description
 
 Generates SQL for the specifed number of changeSets from the changelog. Executes against the database configured in `application.[yml|groovy]` for the current environment (defaults to `dev`).
 

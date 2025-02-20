@@ -1,10 +1,10 @@
-==== dbm-rollback-to-date
+===== dbm-rollback-to-date
 
-===== Purpose
+====== Purpose
 
 Rolls back the database to the state it was in at the given date/time.
 
-===== Description
+====== Description
 
 You can specify just the date, or the date and time. The date format must be `yyyy-MM-dd` and the time format must be `HH:mm:ss`.
 

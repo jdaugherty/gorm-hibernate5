@@ -1,10 +1,10 @@
-==== dbm-list-locks
+===== dbm-list-locks
 
-===== Purpose
+====== Purpose
 
 Lists who currently has locks on the database changelog to STDOUT or a file.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

@@ -1,10 +1,10 @@
-==== dbm-tag
+===== dbm-tag
 
-===== Purpose
+====== Purpose
 
 Adds a tag to mark the current database state.
 
-===== Description
+====== Description
 
 Useful for future rollbacks to a specific tag (e.g. using the <<ref-rollback-scripts-dbm-rollback,dbm-rollback>> script).
 

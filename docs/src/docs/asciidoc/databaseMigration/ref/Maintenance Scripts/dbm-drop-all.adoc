@@ -1,10 +1,10 @@
-==== dbm-drop-all
+===== dbm-drop-all
 
-===== Purpose
+====== Purpose
 
 Drops all database objects owned by the user.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

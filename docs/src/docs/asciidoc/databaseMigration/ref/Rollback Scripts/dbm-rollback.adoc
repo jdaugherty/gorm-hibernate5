@@ -1,10 +1,10 @@
-==== dbm-rollback
+===== dbm-rollback
 
-===== Purpose
+====== Purpose
 
 Rolls back the database to the state it was in when the tag was applied.
 
-===== Description
+====== Description
 
 Requires that the named tag exists. You can create tags with the <<ref-maintenance-scripts-dbm-tag,dbm-tag>> script.
 

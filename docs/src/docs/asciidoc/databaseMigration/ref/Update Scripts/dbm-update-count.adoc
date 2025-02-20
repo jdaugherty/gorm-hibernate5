@@ -1,10 +1,10 @@
-==== dbm-update-count
+===== dbm-update-count
 
-===== Purpose
+====== Purpose
 
 Partially updates a database.
 
-===== Description
+====== Description
 
 Runs the specifed number of un-run changesets from the Changelog. Executes against the database configured in `application.[yml|groovy]` for the current environment (defaults to `dev`).
 

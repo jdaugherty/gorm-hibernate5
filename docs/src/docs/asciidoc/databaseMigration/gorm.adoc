@@ -1,4 +1,4 @@
-== GORM Support
+=== GORM Support
 
 The plugin's support for GORM is one feature that differentiates it from using Liquibase directly. Typically, when using Liquibase you make changes to a database yourself, and then create changesets manually, or use a diff script to compare your updated database to one that hasn't been updated yet. This is a decent amount of work and is rather error-prone. It's easy to forget some changes that aren't required but help performance, for example creating an index on a foreign key when using MySQL.
 

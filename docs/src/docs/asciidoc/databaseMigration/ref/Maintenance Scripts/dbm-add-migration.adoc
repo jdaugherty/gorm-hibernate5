@@ -1,10 +1,10 @@
-==== dbm-add-migration
+===== dbm-add-migration
 
-===== Purpose
+====== Purpose
 
 Adds a template migration file to your project and to the changelog file.
 
-===== Description
+====== Description
 
 This script provides a template in which to place your migration behaviour code, whether
 Grails code or raw SQL.

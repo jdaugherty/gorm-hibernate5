@@ -1,10 +1,10 @@
-==== dbm-update-sql
+===== dbm-update-sql
 
-===== Purpose
+====== Purpose
 
 Writes the SQL that will update the database to the current version to STDOUT or a file.
 
-===== Description
+====== Description
 
 Generates SQL for all un-run changeSets from the changelog. Executes against the database configured in `application.[yml|groovy]` for the current environment (defaults to `dev`).
 

@@ -1,8 +1,8 @@
-== Groovy Preconditions
+=== Groovy Preconditions
 
 In addition to the built-in Liquibase preconditions (see http://www.liquibase.org/manual/preconditions[the documentation] for what's available) you can also specify preconditions using Groovy code (as long as you're using the Groovy DSL file format). These changes use the `grailsPrecondition` tag name and are contained in the `databaseChangeLog` tag or in a `changeSet` tag like standard built-in tags.
 
-=== General format
+==== General format
 
 This is the general format of a Groovy-based precondition:
 
@@ -49,7 +49,7 @@ As you can see there are a few ways to indicate that a precondition wasn't met:
 * call the `fail(String message)` method (throws a `PreconditionFailedException`)
 * throw an exception (shouldn't be necessary - use `assert` or `fail()` instead)
 
-=== Available variables
+==== Available variables
 
 * `database` - the current Liquibase `Database` instance
 * `databaseConnection` - the current Liquibase `DatabaseConnection` instance, which is a wrapper around the JDBC `Connection` (but doesn't implement the `Connection` interface)
@@ -61,7 +61,7 @@ As you can see there are a few ways to indicate that a precondition wasn't met:
 * `changeSet` - the current Liquibase `ChangeSet` instance
 * `changeLog` - the current Liquibase `DatabaseChangeLog` instance
 
-=== Utility methods
+==== Utility methods
 
 * `createDatabaseSnapshotGenerator()` - retrieves the `DatabaseSnapshotGenerator` for the current `Database`
 * `createDatabaseSnapshot(String schemaName = null)` - creates a `DatabaseSnapshot` for the current `Database` (and schema if specified)

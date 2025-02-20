@@ -1,10 +1,10 @@
-==== dbm-clear-checksums
+===== dbm-clear-checksums
 
-===== Purpose
+====== Purpose
 
 Removes current checksums from database. On next run checksums will be recomputed.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

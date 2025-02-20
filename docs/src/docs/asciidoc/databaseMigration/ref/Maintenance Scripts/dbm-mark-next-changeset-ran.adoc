@@ -1,10 +1,10 @@
-==== dbm-mark-next-changeset-ran
+===== dbm-mark-next-changeset-ran
 
-===== Purpose
+====== Purpose
 
 Mark the next change set as executed in the database.
 
-===== Description
+====== Description
 
 If a filename is specified, writes the SQL that will perform the update that file but doesn't update.
 

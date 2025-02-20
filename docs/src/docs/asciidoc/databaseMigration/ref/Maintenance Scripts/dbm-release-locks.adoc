@@ -1,10 +1,10 @@
-==== dbm-release-locks
+===== dbm-release-locks
 
-===== Purpose
+====== Purpose
 
 Releases all locks on the database changelog.
 
-===== Description
+====== Description
 
 Usage:
 [source,java]

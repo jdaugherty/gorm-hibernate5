@@ -1,9 +1,3 @@
-:includedir: _includes
-
-= Grails Database Migration Plugin
-:source-highlighter: coderay
-:numbered:
-
 [[introduction]]
 include::introduction.adoc[]
 
@@ -29,10 +23,10 @@ include::gorm.adoc[]
 include::dbdoc.adoc[]
 
 [[reference]]
-== Reference
+=== Reference
 
 [[ref-diff-scripts]]
-=== Diff Scripts
+==== Diff Scripts
 
 [[ref-diff-scripts-dbm-diff]]
 include::ref/Diff Scripts/dbm-diff.adoc[]
@@ -41,13 +35,13 @@ include::ref/Diff Scripts/dbm-diff.adoc[]
 include::ref/Diff Scripts/dbm-gorm-diff.adoc[]
 
 [[ref-documentation-scripts]]
-=== Documentation Scripts
+==== Documentation Scripts
 
 [[ref-documentation-scripts-dbm-db-doc]]
 include::ref/Documentation Scripts/dbm-db-doc.adoc[]
 
 [[ref-maintenance-scripts]]
-=== Maintenance Scripts
+==== Maintenance Scripts
 
 [[ref-maintenance-scripts-dbm-add-migration]]
 include::ref/Maintenance Scripts/dbm-add-migration.adoc[]
@@ -125,7 +119,7 @@ include::ref/Rollback Scripts/dbm-rollback-to-date.adoc[]
 include::ref/Rollback Scripts/dbm-rollback.adoc[]
 
 [[ref-update-scripts]]
-=== Update Scripts
+==== Update Scripts
 
 [[ref-update-scripts-dbm-previous-changeset-sql]]
 include::ref/Update Scripts/dbm-previous-changeset-sql.adoc[]

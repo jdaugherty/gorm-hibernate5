@@ -1,10 +1,10 @@
-==== dbm-rollback-count-sql
+===== dbm-rollback-count-sql
 
-===== Purpose
+====== Purpose
 
 Writes the SQL to roll back the specified number of change sets to STDOUT or a file.
 
-===== Description
+====== Description
 
 
 Usage:
